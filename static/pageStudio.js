@@ -585,7 +585,7 @@ function loadLegacyPreview() {
             quality: "high",
             wmode: "transparent",
         }, {
-            movieId: "1", 
+            movieId: "${params.flashvars.presaveId}", 
             ut: "60",
             movieLid: "13", 
             apiserver: "/", 
