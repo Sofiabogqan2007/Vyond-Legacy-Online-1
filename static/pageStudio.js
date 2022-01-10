@@ -590,7 +590,7 @@ function loadLegacyPreview() {
         autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
         utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
                     s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
-                ratingCount: "", fb_app_url: "https://vyondlegacyoffical.herokuapp.com/", numContact: 0, isInitFromExternal: 1, storePath: "https://josephcrosmanplays532.github.io/store/3a981f5cb2739137/<store>", clientThemePath: "https://josephcrosmanplays532.github.io/static/5bd63188783238be/<client_theme>", animationPath: "https://josephcrosmanplays532.github.io/animation/66453a3ba2cc5e1a/",
+                ratingCount: "", fb_app_url: "https://vyondlegacyoffical.herokuapp.com/", numContact: 0, isInitFromExternal: 1, storePath: "${params.flashvars.storePath}", clientThemePath: "${params.flashvars.clientThemePath}", animationPath: "${params.flashvars.animationPath}",
 	startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
