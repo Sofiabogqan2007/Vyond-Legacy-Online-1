@@ -1,4 +1,3 @@
-
 const sessions = require('../data/sessions');
 const fUtil = require('../fileUtil');
 const stuff = require('./info');
@@ -585,8 +584,8 @@ function loadLegacyPreview() {
         player_url: "${params.flashvars.animationPath}player.swf",
         quality: "high"
     }, {
-        movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
-        movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
+        movieOwner: "", movieOwnerId: "", movieId: "", ut: "60",
+        movieLid: "13", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
         apiserver: "/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
         autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
         utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
