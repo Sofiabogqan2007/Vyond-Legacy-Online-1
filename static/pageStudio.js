@@ -250,21 +250,21 @@ function voiceBanner(bannerId) {
 }
 </script>
     <div id="previewPlayerContainer" style="display: none;">
-      <div class="preview-player" id="previewPlayer">
-        <h2>Preview Video</h2>
-        <div id="playerdiv"></div>
-        <div id="h5-playerdiv"></div>
-        <div class="buttons clearfix">
-            <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Back to editing</button>
-            <button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>            </div>
+        <div class="preview-player" id="previewPlayer">
+            <h2>Preview Video</h2>
+            <div id="playerdiv"></div>
+            <div class="buttons clearfix">
+                <button class="preview-button edit" onclick="switchBackToStudio();">Back to editing</button>
+                <button class="preview-button save" onclick="publishStudio();">Save Now</button>            </div>
+
             <a class="close_btn" href="#" onclick="switchBackToStudio(); return false;">×</a>
         </div>
     </div>
     <div class="video-tutorial" id="video-tutorial" style="display: none;">
         <div class="video-tutorial-body">
-            <h2> </h2>
+            <h2>&nbsp;</h2>
             <div class="video-tutorial-player">
-                <div id="wistia_player" class="wistia_embed" style="width:860px;height:445px"> </div>
+                <div id="wistia_player" class="wistia_embed" style="width:860px;height:445px">&nbsp;</div>
             </div>
             <a class="close_btn" href="#" onclick="return false;">×</a>
         </div>
@@ -272,7 +272,6 @@ function voiceBanner(bannerId) {
             <button class="tutorial-button" type="button">
                 Close            </button>
         </div>
-    </div>
 </div>
 <div style="display:none">
 </div>
