@@ -250,49 +250,13 @@ function voiceBanner(bannerId) {
 }
 </script>
     <div id="previewPlayerContainer" style="display: none;">
-        <div class="preview-player" id="previewPlayer">
-            <h2>Preview Video</h2>
-            <div id="playerdiv"></div>
-            <div id="h5-playerdiv">
-                <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
-                <div class="player-overlay loading">
-                    <div class="loading-icon">
-                        <div class="loading-message"></div>
-                    </div>
-                    <div class="replay-button"></div>
-                </div>
-                <div class="video-controls">
-                    <div class="playback-button">
-                        <div class="icon-image"></div>
-                    </div>
-                    <div class="seek-bar">
-                        <div class="value-bar total-bar"></div>
-                        <div class="value-bar buffered-bar"></div>
-                        <div class="value-bar played-bar"></div>
-                        <div class="slider-thumb"></div>
-                        <div class="time-tooltip">00:00</div>
-                    </div>
-                    <div class="time-display">
-                        <div class="text">00:00 / 00:00</div>
-                    </div>
-                    <div class="volume-control">
-                        <div class="volume-icon">
-                            <div class="icon-image"></div>
-                        </div>
-                        <div class="volume-slider">
-                            <div class="slider-track">
-                                <div class="track-value-bar"></div>
-                            </div>
-                            <div class="slider-thumb"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="preview-alert-block" class="preview-alert-block clearfix" style="display: none;">Auto-pause at end of scenes is not supported in our web video player.<br/>The auto-pause feature is supported once you download the video as presentation in the &#34;Share/Export&#34; overlay.</div>
-            <div class="buttons clearfix">
-                <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Continue Editing</button>
-		<button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>
-                            </div>
+      <div class="preview-player" id="previewPlayer">
+        <h2>Preview Video</h2>
+        <div id="playerdiv"></div>
+        <div id="h5-playerdiv"></div>
+        <div class="buttons clearfix">
+            <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Back to editing</button>
+            <button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>            </div>
             <a class="close_btn" href="#" onclick="switchBackToStudio(); return false;">×</a>
         </div>
     </div>
