@@ -1,3 +1,4 @@
+
 const sessions = require('../data/sessions');
 const fUtil = require('../fileUtil');
 const stuff = require('./info');
@@ -253,18 +254,54 @@ function voiceBanner(bannerId) {
         <div class="preview-player" id="previewPlayer">
             <h2>Preview Video</h2>
             <div id="playerdiv"></div>
+            <div id="h5-playerdiv">
+                <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
+                <div class="player-overlay loading">
+                    <div class="loading-icon">
+                        <div class="loading-message"></div>
+                    </div>
+                    <div class="replay-button"></div>
+                </div>
+                <div class="video-controls">
+                    <div class="playback-button">
+                        <div class="icon-image"></div>
+                    </div>
+                    <div class="seek-bar">
+                        <div class="value-bar total-bar"></div>
+                        <div class="value-bar buffered-bar"></div>
+                        <div class="value-bar played-bar"></div>
+                        <div class="slider-thumb"></div>
+                        <div class="time-tooltip">00:00</div>
+                    </div>
+                    <div class="time-display">
+                        <div class="text">00:00 / 00:00</div>
+                    </div>
+                    <div class="volume-control">
+                        <div class="volume-icon">
+                            <div class="icon-image"></div>
+                        </div>
+                        <div class="volume-slider">
+                            <div class="slider-track">
+                                <div class="track-value-bar"></div>
+                            </div>
+                            <div class="slider-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preview-alert-block" class="preview-alert-block clearfix" style="display: none;">Auto-pause at end of scenes is not supported in our web video player.<br/>The auto-pause feature is supported once you download the video as presentation in the &#34;Share/Export&#34; overlay.</div>
             <div class="buttons clearfix">
-                <button class="preview-button edit" onclick="switchBackToStudio();">Back to editing</button>
-                <button class="preview-button save" onclick="publishStudio();">Save Now</button>            </div>
-
+                <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Continue Editing</button>
+		<button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>
+                            </div>
             <a class="close_btn" href="#" onclick="switchBackToStudio(); return false;">×</a>
         </div>
     </div>
     <div class="video-tutorial" id="video-tutorial" style="display: none;">
         <div class="video-tutorial-body">
-            <h2>&nbsp;</h2>
+            <h2> </h2>
             <div class="video-tutorial-player">
-                <div id="wistia_player" class="wistia_embed" style="width:860px;height:445px">&nbsp;</div>
+                <div id="wistia_player" class="wistia_embed" style="width:860px;height:445px"> </div>
             </div>
             <a class="close_btn" href="#" onclick="return false;">×</a>
         </div>
@@ -272,6 +309,7 @@ function voiceBanner(bannerId) {
             <button class="tutorial-button" type="button">
                 Close            </button>
         </div>
+    </div>
 </div>
 <div style="display:none">
 </div>
@@ -542,19 +580,19 @@ function loadLegacyPreview() {
     pauseH5PreviewPlayer();
     savePreviewData(movieDataXmlStr);
     createPreviewPlayer("playerdiv", {
-            height: 360,
-            width: 640,
-            player_url: "${params.flashvars.animationPath}player.swf",
-            quality: "high",
-            wmode: "transparent",
-        }, { 
-            ut: "60", 
-            apiserver: "/",  
-            autostart: "1",  
-            isInitFromExternal: 1, 
-            storePath: "${params.flashvars.storePath}", 
-            clientThemePath: "${params.flashvars.clientThemePath}", 
-            startFrame: previewStartFrame
+        height: 360,
+        width: 640,
+        player_url: "${params.flashvars.animationPath}player.swf",
+        quality: "high"
+    }, {
+        movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
+        movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
+        apiserver: "/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+        autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
+        utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
+                    s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
+                ratingCount: "", fb_app_url: "https://vyondlegacyoffical.herokuapp.com/", numContact: 0, isInitFromExternal: 1, storePath: "https://josephcrosmanplays532.github.io/store/3a981f5cb2739137/<store>", clientThemePath: "https://josephcrosmanplays532.github.io/static/5bd63188783238be/<client_theme>", animationPath: "https://josephcrosmanplays532.github.io/animation/66453a3ba2cc5e1a/",
+	startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
 }
