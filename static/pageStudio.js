@@ -579,17 +579,40 @@ function loadLegacyPreview() {
     pauseH5PreviewPlayer();
     savePreviewData(movieDataXmlStr);
     createPreviewPlayer("playerdiv", {
-        height: 360,
-        width: 640,
-        player_url: "${params.flashvars.animationPath}player.swf",
-        quality: "high"
-    }, {
-        bs: "adam", nextUrl: "/yourvideos", movieId: "${params.flashvars.presaveId}", ut: "60",
-        isWide: "1", presaveId: "${params.flashvars.presaveId}", page: "", 
-        apiserver: "/", ctc: "go", tlang: "en_US",
-        autostart: "1", appCode: "go", isEmbed: "1", 
-                storePath: "${params.flashvars.storePath}", clientThemePath: "${params.flashvars.clientThemePath}",
-        startFrame: previewStartFrame
+            height: 360,
+            width: 640,
+            player_url: "${params.flashvars.animationPath}player.swf",
+            quality: "high",
+            wmode: "transparent",
+        }, {
+            movieId: "1", 
+            ut: "60",
+            movieLid: "13", 
+            apiserver: "/", 
+            copyable: "0", 
+            isPublished: "0", 
+            ctc: "go", 
+            tlang: "en_US", 
+            autostart: "1", 
+            appCode: "go", 
+            is_slideshow: "0", 
+            originalId: "0", 
+            is_emessage: "0", 
+            isEmbed: "1", 
+            refuser: "",
+            utm_source: "", 
+            uid: "", 
+            isTemplate: "1", 
+            showButtons: "1", 
+            chain_mids: "", 
+            showshare: "1", 
+            averageRating: "",
+            ratingCount: "", 
+            numContact: 0, 
+            isInitFromExternal: 1, 
+            storePath: "${params.flashvars.storePath}", 
+            clientThemePath: "${params.flashvars.clientThemePath}", 
+            startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
 }
