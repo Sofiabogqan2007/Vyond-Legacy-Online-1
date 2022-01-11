@@ -397,7 +397,7 @@ if (self !== top) {
                             <div class="vthumb-clip"><div class="vthumb-clip-inner"><span class="valign"></span><img src="/movie_thumbs/${params.flashvars.movieId}.png" alt="election"></div></div>
                         </div>
                     </div>
-                    <div class="status draft">
+                    <div class="status public">
                         <span class="draft-text">Draft</span>
                         <span class="unlisted-text">Unlisted</span>
                         <span class="private-text">Private</span>
