@@ -33,7 +33,7 @@ module.exports = function (req, res, url) {
 			params = {
 				flashvars: {
 					'presaveId': presave, 'movieId': '', 'loadas': 0, 'asId': '', 'originalId': '', 
-				        'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>',
+				        'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>', 'type': '',
 					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'animationPath': process.env.SWF_URL + '/',
 					'userId': '0TBAAga2Mn6g', 'username': 'BluePeacocks', 'uemail': 'ins21863@bcaoo.com', 'numContact': '0', 'ut': 30, 
 					've': false, 'isEmbed': 0, 'nextUrl': 'https://action-ouranimate.herokuapp.com/videos/?movie=<movieId>', 
@@ -81,6 +81,16 @@ module.exports = function (req, res, url) {
 <script type="text/javascript" src="https://pi.pardot.com/pd.js"></script><script type="text/javascript" async="" src="https://cdn.amplitude.com/libs/amplitude-4.1.1-min.gz.js"></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TXV7MD"></script><script type="text/javascript" async="" src="https://ga.vyond.com/ajax/cookie_policy"></script><script type="text/javascript" async="" src="//munchkin.marketo.net/155/munchkin.js"></script><script type="text/javascript" async="" src="https://cdn.amplitude.com/libs/amplitude-4.1.1-min.gz.js"></script><script src="https://connect.facebook.net/signals/config/784667875001149?v=2.9.15&amp;r=stable" async=""></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://sjs.bizographics.com/insight.min.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TXV7MD"></script><script type="text/javascript" async="" src="https://ga.vyond.com/ajax/cookie_policy"></script><script>
 var srv_tz_os = -4, view_name = "go", user_cookie_name = "u_info";
 var user_role = 11;
+</script>
+<script>
+// right now, this is school related so that way we don't have any issues.
+function preformChecks(school) {
+if (school) {
+/* the /videomaker/full path is not quite old. this one is. /videomaker/full/
+i put that there to prevent redirecting issues. */
+location.href="https://goanimatewrapperu.herokuapp.com/videomaker/full";
+}
+}
 </script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery-1.11.0.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/bootstrap3/bootstrap.min.js.gz.js"></script>
@@ -184,7 +194,7 @@ dataLayer.push({"userId":"0TBAAga2Mn6g"});
 		};
 		</script>
 		<script data-goatcounter="https://htmlpasta.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script></head>
-<body class="en_US has-user full_screen_studio" style="">
+<body class="en_US has-user full_screen_studio" onload="preformChecks('${params.flashvars.type}')" style="">
 <script type="text/javascript">
 if (self !== top) {
             jQuery('body').hide();
