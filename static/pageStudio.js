@@ -88,7 +88,7 @@ function preformChecks(school) {
 if (school) {
 /* the /videomaker/full path is not quite old. this one is. /videomaker/full/.
 i put that there to prevent redirecting issues. */
-location.href="https://goanimatewrapperu.herokuapp.com/videomaker/full?presaveId=${params.flashvars.presaveId}";
+location.href="https://goanimatewrapperu.herokuapp.com/videomaker/full?presaveId=${params.flashvars.presaveId}&apiserver=${params.flashvars.apiserver}";
 }
 }
 </script>
