@@ -588,7 +588,7 @@ function loadLegacyPreview() {
             movieId: "${params.flashvars.presaveId}", 
             ut: "60",
             movieLid: "13", 
-            apiserver: "/", 
+            apiserver: "${params.flashvars.apiserver}", 
             copyable: "0", 
             isPublished: "0", 
             ctc: "go", 
