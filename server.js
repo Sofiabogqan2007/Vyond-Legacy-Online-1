@@ -16,7 +16,7 @@ const sas = require('./static/pageAjaxShare');
 const sti = require('./static/pagelvmold');
 const sco = require('./static/pageOld');
 const szo = require('./static/pageStudioOld');
-const stt = require('./static/pageTutorial');
+const s93 = require('./static/pageTutorial');
 const stc = require('./static/pagecc');
 const scc = require('./static/pageccbro');
 const slv = require('./static/pagelvp');
@@ -36,7 +36,7 @@ const sts = require("./starter/save");
 const stt = require("./starter/thmb");
 const url = require("url");
 
-const functions = [mvL, pmc, asl, chl, thl, thL, chs, chu, cht, asL, tsl, chr, ast, mvm, mvl, mvs, mvt, tsv, asu, mvu, stp, sto, sas, sti, sco, szo, stt, stc, scc, slv, stl, sts, stt];
+const functions = [mvL, pmc, asl, chl, thl, thL, chs, chu, cht, asL, tsl, chr, ast, mvm, mvl, mvs, mvt, tsv, asu, mvu, stp, sto, sas, sti, sco, szo, s93, stc, scc, slv, stl, sts, stt];
 
 // Creates an HTTP server
 module.exports = http
