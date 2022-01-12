@@ -1,5 +1,5 @@
 // Special Thanks To The Wrapper Offline Team for making the code to make the preview window voices work after i tried to fix them. these people are the best out there!
-const fUtil = require("../fileUtil");
+const fUtil = require("../misc/file");
 const stuff = require("./info");
 const http = require("http");
 
