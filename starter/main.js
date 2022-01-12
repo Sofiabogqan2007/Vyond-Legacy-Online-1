@@ -1,4 +1,4 @@
-const caché = require('../data/caché');
+const caché = require('./caché');
 const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
