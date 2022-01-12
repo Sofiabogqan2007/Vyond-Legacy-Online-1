@@ -1,5 +1,4 @@
-const sessions = require("../data/sessions");
-const fUtil = require("../fileUtil");
+const fUtil = require("../misc/file");
 const stuff = require("./info");
 const http = require("http");
 
@@ -104,7 +103,6 @@ module.exports = function (req, res, url) {
 				},
 				allowScriptAccess: "always",
 			};
-			sessions.set({ movieId: presave }, req);
 			break;
 		}
 			
