@@ -3,6 +3,8 @@ const env = Object.assign(process.env,
 	require('./config'));
 
 const http = require('http');
+const starterSave = require('./starter/save');
+const starterThmb = require('./starter/thmb');
 const chr = require('./character/redirect');
 const pmc = require('./character/premade');
 const chl = require('./character/load');
@@ -64,6 +66,8 @@ const functions = [
 	sco,
 	sas,
 	stt,
+	starterSave,
+	starterThmb,
 ];
 
 module.exports = http.createServer((req, res) => {
