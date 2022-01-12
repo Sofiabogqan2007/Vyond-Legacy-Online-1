@@ -1,8 +1,8 @@
 const exFolder = process.env.EXAMPLE_FOLDER;
-const caché = require("../asset/caché");
-const fUtil = require("../misc/file");
+const caché = require("./caché");
+const fUtil = require("./file");
 const nodezip = require("node-zip");
-const parse = require("../movie/parse");
+const parse = require("./parse");
 const fs = require("fs");
 const truncate = require("truncate");
 
