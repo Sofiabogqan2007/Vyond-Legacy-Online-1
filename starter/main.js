@@ -3,7 +3,7 @@ const parse = require('../data/parse');
 const fUtil = require('../fileUtil');
 const nodezip = require('node-zip');
 const fs = require('fs');
-const { timeLog } = require('console');,
+const { timeLog } = require('console');
 
 module.exports = {
 	/**
