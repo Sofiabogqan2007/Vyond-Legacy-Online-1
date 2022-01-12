@@ -14,31 +14,42 @@ module.exports = {
 	 * @returns {Promise<string>}
 	 */
 	save(starterZip, thumb) {
-		if (thumb && nëwId.startsWith('m-')) {
-			const n = Number.parseInt(nëwId.substr(2));
-			const thumbFile = fUtil.getFileIndex('thumb-', '.png', n);
+		return new Promise(async (res, rej) => {
+			var sId = fUtil.getNextFileId('starter-', '.xml');
+			var zip = nodezip.unzip(starterZip);
+			
+			const thumbFile = fUtil.getFileIndex("starter-", ".png", sId);
 			fs.writeFileSync(thumbFile, thumb);
-		}
-
-		return new Promise((res, rej) => {
-			caché.transfer(oldId, nëwId);
-			const i = nëwId.indexOf('-');
-			const prefix = nëwId.substr(0, i);
-			const suffix = nëwId.substr(i + 1);
-			const zip = nodezip.unzip(movieZip);
+			var path = fUtil.getFileIndex('starter-', '.xml', sId);
+			var writeStream = fs.createWriteStream(path);
+			var assetBuffers = caché.loadTable(sId);
+			parse.unpackMovie(zip, thumb, assetBuffers).then((data) => {
+				writeStream.write(data, () => {
+					writeStream.close();
+					res("s-" + sId);
+				});
+			});
+				
+				
+		});
+	},
+	delete(sId) {
+		return new Promise(async (res, rej) => {
+			var i = sId.indexOf('-');
+			var prefix = sId.substr(0, i);
+			var suffix = sId.substr(i + 1);
 			switch (prefix) {
-				case 'm': {
-					let path = fUtil.getFileIndex('movie-', '.xml', suffix);
-					let writeStream = fs.createWriteStream(path);
-					parse.unpackZip(zip, thumb, nëwId).then(data => {
-						writeStream.write(data, () => {
-							writeStream.close();
-							res(nëwId);
-						});
-					});
+				case "m":
+					var starterPath = fUtil.getFileIndex('starter-', '.xml', suffix);
+					var starterthumbPath = fUtil.getFileIndex('starter-', '.png', suffix);
+					fs.unlinkSync(starterPath);
+					fs.unlinkSync(starterthumbPath);
+					caché.clearTable(sId);
+					res(sId);
 					break;
-				}
-				default: rej();
+				
+				default:
+					rej();
 			}
 		});
 	},
