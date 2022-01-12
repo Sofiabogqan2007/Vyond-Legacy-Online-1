@@ -60,6 +60,13 @@ module.exports = {
 		caché[mId].time = new Date();
 		return buffers;
 	},
+	loadTable(mId) {
+		const buffers = {};
+		this.list(mId).forEach((aId) => {
+			buffers[aId] = fs.readFileSync(`${cachéFolder}/${mId}.${aId}`);
+		});
+		return buffers;
+	},
 	/**
 	 *
 	 * @param {string} mId
