@@ -6,7 +6,7 @@
         <theme id="infographics" name="Video Infographics" thumb="" cc_theme_id="infographics" />
         <theme id="commoncraft" name="Common Craft" thumb="" cc_theme_id="commoncraft" />
         <theme id="bizmodels" name="Business Models" thumb="" cc_theme_id="bizmodels" />
-	<theme id="whiteboard" name="Whiteboard Animation" thumb="" cc_theme_id="custom" />
+	<theme id="import" name="Imported Assets" thumb="" cc_theme_id="import" />
 	<word></word>
 	<whiteword />
 	<excludeAssetIDs />
