@@ -1,4 +1,4 @@
-const starter = require('./main');
+const starter = require('./starterCore');
 module.exports = function (req, res, url) {
 	if (req.method != 'GET' || !url.path.startsWith('/starter_thumbs')) return;
 	starter.thumb(url.path.substr(url.path.lastIndexOf('/') + 1))
