@@ -3,8 +3,8 @@ const env = Object.assign(process.env,
 	require('./config'));
 
 const http = require('http');
-const starterSave = require('./starter/save');
-const starterThmb = require('./starter/thmb');
+const starterSave = require('./movie/save-starter');
+const starterThmb = require('./movie/starterThumbs');
 const chr = require('./character/redirect');
 const pmc = require('./character/premade');
 const chl = require('./character/load');
